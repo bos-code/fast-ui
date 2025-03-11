@@ -1,0 +1,31 @@
+{
+  "name": "fast-ui",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/bos-code/fast-ui#readme",
+  "bugs": {
+    "url": "https://github.com/bos-code/fast-ui/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bos-code/fast-ui.git"
+  },
+  "license": "ISC",
+  "author": "chidera",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.13",
+    "@tailwindcss/vite": "^4.0.13",
+    "gsap": "^3.12.7",
+    "tailwindcss": "^4.0.13"
+  },
+  "devDependencies": {
+    "vite": "^6.2.1"
+  }
+}
