@@ -9,8 +9,8 @@ import { TextPlugin } from "gsap/TextPlugin";
 
 gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,TextPlugin);
 
-gsap.to("h1", {
-    duration: 1,
-    x: 100,
-    ease: "bounce"
-});
+// gsap.to("h1", {
+//     duration: 1,
+//     x: 100,
+//     ease: "bounce"
+// });
