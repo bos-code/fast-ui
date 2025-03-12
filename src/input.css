@@ -10,6 +10,16 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
+
+}
+.centered{
+    @apply  px-28;
+}
+
+
+.heading-secondary{
+    @apply text-6xl leading-1.5;
+    font-family: 'Raleway', sans-serif;
 }
 
 nav {
@@ -91,4 +101,25 @@ nav {
 
 .button {
   @apply bg-black px-14 py-[18px] rounded-xl;
+}
+
+.featur-grid{
+  @apply grid grid-cols-4 mt-3 py-2 gap-8;
+}
+.featur-grid>.box{
+  @apply flex flex-col items-start gap-[18px] p-7;
+  background: linear-gradient(121.9deg, #1C1C1C 0%, #050505 96.81%);
+border-radius: 10px;
+border: 1px solid #2B2B2B;
+
+}
+.box2{
+    @apply flex items-center justify-between  gap-[18px] p-5;
+  background: linear-gradient(121.9deg, #1C1C1C 0%, #050505 96.81%);
+border-radius: 10px;
+border: 1px solid #2B2B2B;
+}
+
+.svg--wrapper{
+  @apply h-11 w-11 bg-[#00000033] rounded-[9px] flex items-center justify-center;
 }
