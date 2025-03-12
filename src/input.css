@@ -123,3 +123,4 @@ border: 1px solid #2B2B2B;
 .svg--wrapper{
   @apply h-11 w-11 bg-[#00000033] rounded-[9px] flex items-center justify-center;
 }
+
