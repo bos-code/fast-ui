@@ -10,16 +10,14 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-
 }
-.centered{
-    @apply  px-28;
+.centered {
+  @apply px-28;
 }
 
-
-.heading-secondary{
-    @apply text-6xl leading-1.5;
-    font-family: 'Raleway', sans-serif;
+.heading-secondary {
+  @apply text-6xl leading-1.5;
+  font-family: "Raleway", sans-serif;
 }
 
 nav {
@@ -85,42 +83,91 @@ nav {
 }
 
 .hero {
-@apply flex justify-center items-center mt-14 ;
+  @apply flex justify-center items-center mt-14;
 }
 
 .hero-textbox {
   @apply flex flex-col text-wrap justify-center items-center md:w-full lg:w-4/6 xl:w-3/5 md:px-5 lg:px-14 xl:px-24 text-center  gap-9;
-  
-
- 
 }
 
 .heading-primary {
-  @apply text-7xl font-bold ;
+  @apply text-7xl font-bold;
 }
 
 .button {
   @apply bg-black px-14 py-[18px] rounded-xl;
 }
 
-.featur-grid{
+.featur-grid {
   @apply grid grid-cols-4 mt-3 py-2 gap-8;
 }
-.featur-grid>.box{
+.featur-grid > .box {
   @apply flex flex-col items-start gap-[18px] p-7;
-  background: linear-gradient(121.9deg, #1C1C1C 0%, #050505 96.81%);
-border-radius: 10px;
-border: 1px solid #2B2B2B;
-
+  background: linear-gradient(121.9deg, #1c1c1c 0%, #050505 96.81%);
+  border-radius: 10px;
+  border: 1px solid #2b2b2b;
 }
-.box2{
-    @apply flex items-center justify-between  gap-[18px] p-5;
-  background: linear-gradient(121.9deg, #1C1C1C 0%, #050505 96.81%);
-border-radius: 10px;
-border: 1px solid #2B2B2B;
+.box2 {
+  @apply flex items-center justify-between  gap-[18px] p-5;
+  background: linear-gradient(121.9deg, #1c1c1c 0%, #050505 96.81%);
+  border-radius: 10px;
+  border: 1px solid #2b2b2b;
 }
 
-.svg--wrapper{
+.svg--wrapper {
   @apply h-11 w-11 bg-[#00000033] rounded-[9px] flex items-center justify-center;
 }
 
+/* section 2 */
+.gallery-section {
+  position: relative;
+  margin-top: 15rem;
+}
+
+.bgi {
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  object-fit: contain;
+  object-position: top;
+  z-index: -1;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+}
+
+.head-text {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3.6rem;
+}
+
+.slide {
+  border: 1px solid var(--Stroke, #2b2b2b);
+  background: linear-gradient(121.9deg, #1c1c1c 0%, #050505 96.81%);
+  border-radius: 10px;
+  padding: 2.2rem;
+}
