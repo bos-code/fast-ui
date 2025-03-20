@@ -123,6 +123,9 @@ nav {
   position: relative;
   margin-top: 15rem;
 }
+.swiper {
+  overflow: visible !important;
+}
 
 .bgi {
   position: absolute;
@@ -139,6 +142,7 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  height: 100% !important;
 }
 
 .text-box {
@@ -170,4 +174,5 @@ nav {
   background: linear-gradient(121.9deg, #1c1c1c 0%, #050505 96.81%);
   border-radius: 10px;
   padding: 2.2rem;
+  @apply snap-center;
 }

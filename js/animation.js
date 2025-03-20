@@ -20,3 +20,32 @@ gsap.to(".bgi", {
   repeat: -1,
   ease: "linear",
 });
+
+import Swiper from "swiper";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
+
+const swiper = new Swiper(".swiper", {
+  slidesPerView: 2, // Show 2 slides at a time
+  centeredSlides: true, // Center the active slide
+  spaceBetween: 20, // Adjust spacing between slides
+  effect: "coverflow", // Nice 3D effect
+  coverflowEffect: {
+    rotate: 20,
+    stretch: 0,
+    depth: 200,
+    modifier: 1,
+    slideShadows: true,
+  },
+  grabCursor: true, // Makes dragging feel natural
+  loop: true, // Infinite scrolling
+  speed: 800, // Animation speed
+  keyboard: {
+    enabled: true, // Enable keyboard control
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
