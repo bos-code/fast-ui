@@ -118,4 +118,54 @@ nav {
   @apply h-11 w-11 bg-[#00000033] rounded-[9px] flex items-center justify-center;
 }
 
-/* section 2 */
+/* section price */
+.meeting .btn-accent {
+  width: 100%;
+}
+
+.pricing {
+  @apply mx-40;
+}
+.price-wrapper {
+  @apply bg-[#4E47FF] flex flex-col items-start justify-center gap-5 p-10 rounded-[20px];
+}
+
+.price-wrapper h4 {
+  @apply text-3xl font-bold;
+}
+
+.price-wrapper p {
+  @apply text-sm w-3/4;
+}
+
+.price-wrapper ul {
+  @apply list-none space-y-3 grid grid-cols-2 gap-x-[119px] gap-y-4;
+}
+
+.price-wrapper ul li {
+  @apply flex items-center gap-2;
+}
+
+.price-wrapper ul li img {
+  @apply h-5 w-5;
+}
+
+.price-wrapper ul li span {
+  @apply text-sm text-gray-300;
+}
+
+.price-wrapper .price {
+  @apply flex items-center justify-between bg-black px-10 py-7  mt-2 w-full rounded-xl;
+}
+
+.price-wrapper .price p {
+  @apply text-6xl font-bold;
+}
+
+.price-wrapper .price p span {
+  @apply text-base text-gray-400;
+}
+
+.price-wrapper .price img {
+  @apply w-20 h-20;
+}

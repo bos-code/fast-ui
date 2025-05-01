@@ -126,7 +126,7 @@ body:not(:hover)::-webkit-scrollbar-thumb {
   background: #121212;
 }
 
-/* *********** 8****************** */
+/***************  swiper  ***************/
 .swiper-button-prev,
 .swiper-button-next {
   position: static;
@@ -181,6 +181,7 @@ body:not(:hover)::-webkit-scrollbar-thumb {
   align-items: center;
   gap: 2rem;
   margin-top: 3.6rem;
+  width: 80%;
 }
 
 .slide {
