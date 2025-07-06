@@ -29,3 +29,32 @@ document.querySelector(".swiper-button-next").addEventListener("click", () => {
 document.querySelector(".swiper-button-prev").addEventListener("click", () => {
   swiper.slidePrev();
 });
+
+
+const headers = document.querySelectorAll(".accordion-header");
+
+headers.forEach((header) => {
+  header.addEventListener("click", () => {
+    const accordion = header.parentElement;
+    const icon = header.querySelector(".accordion-icon");
+
+    // Close all other accordions
+    document.querySelectorAll(".accordion").forEach((acc) => {
+      if (acc !== accordion) {
+        acc.classList.remove("active");
+        acc.querySelector(".accordion-icon").textContent = "+";
+      }
+    });
+
+    // Toggle current accordion
+    const isActive = accordion.classList.contains("active");
+    accordion.classList.toggle("active");
+    icon.textContent = isActive ? "+" : "–";
+  });
+});
+
+const heading = document.getElementById("faq-heading");
+const words = heading.textContent.trim().split(" ");
+heading.innerHTML = words
+  .map((word) => `<span class="block">${word}</span>`)
+  .join("");

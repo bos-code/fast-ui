@@ -20,3 +20,5 @@ gsap.to(".bgi", {
   repeat: -1,
   ease: "linear",
 });
+
+
