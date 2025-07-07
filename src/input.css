@@ -174,16 +174,15 @@ nav {
 /* faq */
 
 .faq-section {
-
   @apply flex flex-col lg:flex-row justify-center items-center gap-4 my-40  relative;
 }
 
-.spring{
+.spring {
   position: absolute;
   top: 0%;
   left: 0;
   z-index: -1;
-  transform:translate(0%, -20%) ;
+  transform: translate(0%, -20%);
 }
 
 .accordion {
@@ -224,4 +223,29 @@ nav {
 
 .accordion.active .accordion-icon {
   transform: rotate(180deg);
+}
+
+/* section contact */
+
+.contact {
+  border-top: 1px solid #2a2a2a;
+  @apply flex flex-col items-center justify-center gap-5 py-32;
+}
+.heading {
+  @apply text-6xl flex-2/5 text-white font-bold leading-[150%] capitalize;
+}
+
+.form {
+  @apply flex flex-col  justify-center gap-5 my-20 w-full max-w-2xl;
+}
+.form label {
+  @apply flex flex-col items-start gap-2;
+}
+
+.input {
+  @apply bg-transparent border border-[#2B2B2B] text-white text-xl rounded-lg px-5 py-3 w-full;
+}
+
+.input::placeholder {
+  @apply text-[#888888] font-light;
 }
