@@ -72,7 +72,7 @@ const swiper = new Swiper(".swiper-2", {
 ## 🛠️ Setup Instructions
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/fast-ui.git
+git clone https://github.com/bos-code/fast-ui.git
 cd fast-ui
 # Open index.html in your browser
 ```
