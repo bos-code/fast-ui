@@ -15,6 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <title>Fast-ul</title>
+    <link rel="shortcut icon" href="/asset/svg/fastLogo.svg" type="image/x-icon">
     <link rel="stylesheet" href="src/font.css" />
     <link rel="stylesheet" href="src/scrollbar.css" />
     <link href="/src/input.css" rel="stylesheet" />
@@ -23,20 +25,70 @@
   </head>
   <body>
     <header class="header">
-      <nav>
+      <nav
+        class="flex items-center justify-between px-6 md:px-28 py-7 relative"
+      >
+        <!-- Logo -->
         <ul class="logo">
           <li><img src="./asset/svg/Logo.svg" alt="fastLogo" /></li>
         </ul>
+
+        <!-- Desktop Nav Links -->
         <ul class="nav-links">
           <li><a class="btn" href="#">Home</a></li>
           <li><a class="btn" href="#">About</a></li>
           <li><a class="btn" href="#">How it Works</a></li>
           <li><a class="btn" href="#">Services</a></li>
         </ul>
+
+        <!-- Desktop Actions -->
         <ul class="nav-actions">
           <li><a href="#">Sign in</a></li>
           <li><a href="#" class="btn-accent">Sign Up</a></li>
         </ul>
+
+        <!-- Hamburger Icon -->
+        <button id="hamburger" class="lg:hidden flex items-center z-50">
+          <svg
+            class="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="fixed top-0 right-0 h-full w-[70%] bg-transparent backdrop-blur-3xl text-white p-6 translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col gap-5 z-40"
+        >
+          <button id="closeMenu" class="self-end inline-block p-2">
+            <svg
+              class="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          <li><a class="btn" href="#">Home</a></li>
+          <li><a class="btn" href="#">About</a></li>
+          <li><a class="btn" href="#">How it Works</a></li>
+          <li><a class="btn" href="#">Services</a></li>
+          <hr class="border-gray-700" />
+          <a href="#">Sign in</a>
+          <a href="#" class="btn-accent">Sign Up</a>
+        </div>
       </nav>
 
       <div class="hero">
@@ -51,11 +103,11 @@
     </header>
 
     <main>
-      <section class="featires -mt-20 mb-36 centered">
-        <div class="text-box mb-20">
-          <h2 class="heading-secondary mb-2">What We do</h2>
+      <section class="feature mt-5 2xl:-mt-20 mb-36 centered">
+        <div class="text-box mb-7 md:mb-12 lg:mb-20">
+          <h2 class="heading-secondary">What We do</h2>
         </div>
-        <div class="featur-grid">
+        <div class="feature-grid">
           <div class="box">
             <figure class="svg--wrapper">
               <img src="./asset/svg/web.svg" alt="icon" />
@@ -101,13 +153,13 @@
               <img class="w-[100%]" src="./asset/image/grid1.png" alt="" />
             </figure>
           </div>
-          <div class="col-span-2 box2">
+          <div class="col-span-2 box2 flex-col md:flex-row">
             <div class="flex flex-col flex-1/2 items-start gap-[18px]">
               <figure class="svg--wrapper">
                 <img src="./asset/svg/web.svg" alt="icon" />
               </figure>
               <h3 class="heading-tertiary">Web Design</h3>
-              <p class="text w-4/5">
+              <p class="text w-full lg:w-4/5">
                 From concept to launch, we create stunning, user-centric
                 websites that elevate your brand and engage your audience.
               </p>
@@ -140,7 +192,7 @@
       <!-- ************** section 2  -->
       <section class="gallery-section swiper relative">
         <img src="./asset/svg/gbg.svg" class="bgi" alt="" />
-        <div class="head">
+        <div class="head centered">
           <img src="./asset/svg/btnlt.svg" alt="" class="swiper-button-prev" />
           <div class="text-box">
             <h2 class="heading-secondary">Check our Work</h2>
@@ -150,6 +202,13 @@
             </p>
           </div>
           <img src="./asset/svg/rght.svg" alt="" class="swiper-button-next" />
+        </div>
+        <div class="text-2 centered">
+          <h2 class="heading-secondary">Check our Work</h2>
+          <p class="head-text">
+            Take a look at some of our recent projects to see how we've helped
+            businesses like yours succeed online.
+          </p>
         </div>
         <div class="gallery swiper-wrapper">
           <figure class="slide swiper-slide">
@@ -177,26 +236,34 @@
       </section>
 
       <!-- ************** section 3 ************ -->
-      <section class="pricing flex flex-col items-center justify-center mt-24">
-        <figure class="start">
+      <section
+        class="pricing flex flex-col items-center justify-center mt-24 centered"
+      >
+        <figure class="start -mt-20 hidden md:block">
           <img class="w-full" src="/asset/image/stared.png" alt="" />
         </figure>
-        <div class="flex mt-24 items-center justify-center gap-10">
+        <div
+          class="flex flex-col md:flex-row mt-14 md:mt-24 items-center justify-center gap-15 md:gap-10"
+        >
           <!-- ***** div 1********** -->
           <div
-            class="content flex-1/3 flex flex-col justify-between items-center gap-25"
+            class="content flex-1/2 md:1/3 flex flex-col justify-center md:justify-between items-center gap-10 md:gap-25"
           >
-            <div class="textbox flex flex-col gap-8">
+            <div
+              class="textbox flex flex-col justify-center text-center md:text-left items-center md:justify-start gap-2 lg:gap-8"
+            >
               <h2 class="heading-secondary mb-2">Pricing</h2>
-              <p class="text-sm">
+              <p class="text-sm head-text max-sm:w-full w-3/4 md:w-full">
                 Take a look at some of our recent projects to see how we've
                 helped businesses like yours succeed online.
               </p>
             </div>
             <div
-              class="meeting flex flex-col gap-8 items-center justify-center"
+              class="meeting flex flex-col gap-4 lg:gap-8 items-center justify-center"
             >
-              <p class="descrip font-bold text-4xl raleway">
+              <p
+                class="descrip font-bold text-2xl md:text-3xl lg:text-4xl raleway"
+              >
                 Let’s Schedule a Meeting
               </p>
               <button class="btn-accent">Schedule Meeting</button>
@@ -383,70 +450,74 @@
       </section>
     </main>
 
-    <footer class="footer-bg px-28 pb-20">
-      <img src="/asset/image/gradient.png" class="gradient" alt="">
-      <div class="footer  ">
-       <img src="/asset/image/star.png" class="star"  alt="">
-      <div class="footer-content">
-        <div class="flex flex-col gap-9 items-start justify-start">
-          <ul class="logo">
-            <li><img src="./asset/svg/Logo.svg" alt="fastLogo" /></li>
+    <footer class="footer-bg px-8 pb-0 lg:px-28 lg:pb-20">
+      <img src="/asset/image/gradient.png" class="gradient" alt="" />
+      <div class="footer">
+        <img src="/asset/image/star.png" class="star" alt="" />
+        <div class="footer-content">
+          <div class="flex flex-col gap-9 items-start justify-start">
+            <ul class="logo self-center md:self-start">
+              <li><img src="./asset/svg/Logo.svg" alt="fastLogo" /></li>
+            </ul>
+            <p class="footer-descript inter">
+              Ready to elevate your online presence? Contact us today to discuss
+              your project and discover how we can bring your vision to life.
+            </p>
+          </div>
+          <ul class="footer-links">
+            <li><a class="btn" href="#">Home</a></li>
+            <li><a class="btn" href="#">About</a></li>
+            <li><a class="btn" href="#">How it Works</a></li>
+            <li><a class="btn" href="#">Services</a></li>
           </ul>
-          <p class="footer-descript inter">
-            Ready to elevate your online presence? Contact us today to discuss
-            your project and discover how we can bring your vision to life.
+        </div>
+        <div
+          class="footer-footer flex flex-col md:flex-row items-center justify-between"
+        >
+          <p class="footer-copy inter flex items-center gap-2">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.11544 8.02607C3.20159 7.50361 3.37795 6.98115 3.6104 6.47461C5.00201 3.44215 8.95827 3.37934 11.6675 5.29632C11.8671 5.43753 12.1327 5.43753 12.3323 5.29632C15.0416 3.37934 18.9979 3.44215 20.3895 6.47461C20.6219 6.98115 20.7983 7.50361 20.8844 8.02607C22.0204 14.9158 14.4678 20 11.9999 20C9.53202 20 1.98019 14.9111 3.11544 8.02607Z"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span class="text-xs whitespace-nowrap">
+              Made with love crafted by chidera</span
+            >
           </p>
-        </div>
-        <ul class="footer-links">
-          <li><a class="btn" href="#">Home</a></li>
-          <li><a class="btn" href="#">About</a></li>
-          <li><a class="btn" href="#">How it Works</a></li>
-          <li><a class="btn" href="#">Services</a></li>
-        </ul>
-      </div>
-      <div
-        class="footer-footer flex flex-col md:flex-row items-center justify-between"
-      >
-        <p class="footer-copy inter flex items-center gap-2">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M3.11544 8.02607C3.20159 7.50361 3.37795 6.98115 3.6104 6.47461C5.00201 3.44215 8.95827 3.37934 11.6675 5.29632C11.8671 5.43753 12.1327 5.43753 12.3323 5.29632C15.0416 3.37934 18.9979 3.44215 20.3895 6.47461C20.6219 6.98115 20.7983 7.50361 20.8844 8.02607C22.0204 14.9158 14.4678 20 11.9999 20C9.53202 20 1.98019 14.9111 3.11544 8.02607Z"
-              stroke="white"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <span> Made with love crafted by chidera</span>
-        </p>
 
-        <div class="footer-socials text-white">
-          <ul>
-            <li>
-              <a href="https://www.instagram.com/deradev.vs/"
-                ><img src="./asset/svg/insta.svg" alt="instagram"
-              /></a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/chidera-okonkwo-38694433a/"
-                ><img src="./asset/svg/linkin.svg" alt="linkedin"
-              /></a>
-            </li>
-            <li>
-              <a href="#"><img src="./asset/svg/titok.svg" alt="tiktok" /></a>
-            </li>
-            <li>
-              <a href="https://github.com/bos-code"><img src="./asset/svg/github.svg" alt="github" /></a>
-            </li>
-          </ul>
+          <div class="footer-socials text-white pb-5 lg:pb-0">
+            <ul>
+              <li>
+                <a href="https://www.instagram.com/deradev.vs/"
+                  ><img src="./asset/svg/insta.svg" alt="instagram"
+                /></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/chidera-okonkwo-38694433a/"
+                  ><img src="./asset/svg/linkin.svg" alt="linkedin"
+                /></a>
+              </li>
+              <li>
+                <a href="#"><img src="./asset/svg/titok.svg" alt="tiktok" /></a>
+              </li>
+              <li>
+                <a href="https://github.com/bos-code"
+                  ><img src="./asset/svg/github.svg" alt="github"
+                /></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-     </div>
     </footer>
   </body>
 </html>

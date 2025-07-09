@@ -10,32 +10,37 @@ body {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  
+  @apply h-[80vh] md:h-[90vh] lg:h-[100vh] bg-cover bg-no-repeat bg-center;
 }
 .centered {
-  @apply px-28;
+  @apply px-7 md:px-10 lg:px-20 xl:px-28   ;
 }
 
 .heading-secondary {
-  @apply text-6xl leading-1.5;
+  @apply text-3xl md:leading-1 w-full md:text-4xl lg:text-5xl xl:text-6xl font-bold  whitespace-nowrap;
   font-family: "Raleway", sans-serif;
 }
 
 nav {
-  @apply flex items-center justify-between px-28 py-7;
+  @apply flex items-center justify-between px-5 md:px-7 lg:px-15 xl:px-20 2xl:px-28 py-7;
 }
 
 .logo {
   @apply flex items-center justify-center gap-1;
 }
 
+li{
+  @apply list-none;
+}
+
 .nav-links {
-  @apply flex items-center p-5 rounded-[20px] text-base font-bold;
+  @apply hidden lg:flex items-center p-5 rounded-[20px] text-base font-bold;
   background: rgba(0, 0, 0, 0.5);
   border: 1px solid var(--Stroke, #2b2b2b);
 }
 .nav-actions {
-  @apply flex items-center gap-3;
+  @apply hidden lg:flex items-center gap-3;
 }
 .btn {
   padding: 10px 20px;
@@ -54,7 +59,7 @@ nav {
   box-shadow: 0px 2px 5px rgba(255, 18, 220, 0.5);
 }
 .btn-accent {
-  @apply rounded-xl bg-[#4E47FF] px-9 py-3 text-white font-bold;
+  @apply rounded-xl bg-[#4E47FF] px-3 lg:px-9 py-3 text-white font-bold;
 }
 
 .btn-accent {
@@ -88,28 +93,28 @@ nav {
 }
 
 .hero-textbox {
-  @apply flex flex-col text-wrap justify-center items-center md:w-full lg:w-4/6 xl:w-3/5 md:px-5 lg:px-14 xl:px-24 text-center  gap-9;
+  @apply flex flex-col text-wrap justify-center items-center w-full md:w-full lg:w-4/6 xl:w-3/5 md:px-5 lg:px-14 xl:px-24 text-center  gap-9;
 }
 
 .heading-primary {
-  @apply text-7xl font-bold;
+  @apply text-4xl  max-sm:text-2xl px-10 sm:px-5 md:text-6xl md:px-20 lg:px-5 lg:text-7xl  font-bold;
 }
 
 .button {
   @apply bg-black px-14 py-[18px] rounded-xl;
 }
 
-.featur-grid {
-  @apply grid grid-cols-4 mt-3 py-2 gap-8;
+.feature-grid {
+  @apply flex flex-col  lg:grid lg:grid-cols-4 mt-3 py-2 gap-8 2xl:gap-10;
 }
-.featur-grid > .box {
-  @apply flex flex-col items-start gap-[18px] p-7;
+.feature-grid > .box {
+  @apply flex flex-col items-start gap-3 lg:gap-[18px] p-7;
   background: linear-gradient(121.9deg, #1c1c1c 0%, #050505 96.81%);
   border-radius: 10px;
   border: 1px solid #2b2b2b;
 }
 .box2 {
-  @apply flex items-center justify-between  gap-[18px] p-5;
+  @apply flex items-center justify-between gap-3  lg:gap-[18px] p-7;
   background: linear-gradient(121.9deg, #1c1c1c 0%, #050505 96.81%);
   border-radius: 10px;
   border: 1px solid #2b2b2b;
@@ -124,27 +129,25 @@ nav {
   width: 100%;
 }
 
-.pricing {
-  @apply mx-40;
-}
+
 .price-wrapper {
-  @apply bg-[#4E47FF] flex flex-col items-start justify-center gap-5 p-10 rounded-[20px];
+  @apply bg-[#4E47FF] flex flex-col items-start justify-center gap-5 p-7 sm:p-5 rounded-[20px];
 }
 
 .price-wrapper h4 {
-  @apply text-3xl font-bold;
+  @apply text-3xl max-sm:text-2xl max-sm:whitespace-nowrap font-bold;
 }
 
 .price-wrapper p {
-  @apply text-sm w-3/4;
+  @apply text-sm max-sm:text-xs max-sm:text-center md:w-3/4;
 }
 
 .price-wrapper ul {
-  @apply list-none space-y-3 grid grid-cols-2 gap-x-[119px] gap-y-4;
+  @apply list-none space-y-3 grid grid-cols-2 max-sm:grid-cols-1  gap-5 lg:gap-x-[119px] gap-y-4;
 }
 
 .price-wrapper ul li {
-  @apply flex items-center gap-2;
+  @apply flex items-center gap-2 whitespace-nowrap;
 }
 
 .price-wrapper ul li img {
@@ -156,11 +159,11 @@ nav {
 }
 
 .price-wrapper .price {
-  @apply flex items-center justify-between bg-black px-10 py-7  mt-2 w-full rounded-xl;
+  @apply flex items-center justify-between max-sm:px-3 bg-black px-8 lg:px-10  lg:py-7 mt-2 w-full rounded-xl;
 }
 
 .price-wrapper .price p {
-  @apply text-6xl font-bold;
+  @apply text-3xl max-sm:text-xl  md:text-4xl lg:text-6xl font-bold;
 }
 
 .price-wrapper .price p span {
@@ -168,13 +171,13 @@ nav {
 }
 
 .price-wrapper .price img {
-  @apply w-20 h-20;
+  @apply  h-20;
 }
 
 /* faq */
 
 .faq-section {
-  @apply flex flex-col lg:flex-row justify-center items-center gap-4 my-40  relative;
+  @apply flex flex-col lg:flex-row justify-center items-center gap-4 my-15 lg:my-40  relative;
 }
 
 .spring {
@@ -194,18 +197,15 @@ nav {
 }
 
 .accordion-header {
-  background: #2b2b2b;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  font-weight: bold;
+ 
+  @apply bg-[#2b2b2b]  max-sm:text-sm px-5 py-3 flex justify-between items-center cursor-pointer font-bold;
+  border-bottom: 1px solid #2b2b2b;
 }
 
 .accordion-icon {
-  font-size: 1.5rem;
-  transition: transform 0.3s;
+  /* font-size: 1.5rem;
+  transition: transform 0.3s; */
+  @apply text-2xl transition-transform duration-300 ease-in-out;
 }
 
 .accordion-content {
@@ -214,10 +214,11 @@ nav {
   padding: 0 1rem;
   background: #2b2b2b;
   transition: max-height 0.4s ease, padding 0.3s ease;
+  @apply max-sm:text-xs
 }
 
 .accordion.active .accordion-content {
-  padding: 1rem;
+  /* padding: 1rem; */
   max-height: 500px;
 }
 
@@ -232,7 +233,7 @@ nav {
   @apply flex flex-col items-center justify-center gap-5 py-32;
 }
 .heading {
-  @apply text-6xl flex-2/5 text-white font-bold leading-[150%] capitalize;
+  @apply text-4xl text-center  lg:text-6xl lg:text-left w-full  flex-2/5 text-white font-bold lg:leading-[150%] capitalize;
 }
 
 .form {
@@ -270,7 +271,7 @@ nav {
 .footer {
   border: 1px solid var(--Stroke, #2b2b2b);
   background: linear-gradient(121.9deg, #1c1c1c 0%, #050505 96.81%);
-  @apply flex flex-col  gap-14 p-20 rounded-[40px] relative;
+  @apply flex flex-col  gap-14 p-5 lg:p-20 rounded-[40px] relative;
 }
 
 .star {
@@ -278,15 +279,15 @@ nav {
   transform: translate(-50%, -50%);
 }
 .footer-content {
-  @apply flex  flex-col md:flex-row justify-between items-center;
+  @apply flex  flex-col justify-center md:flex-row md:justify-between items-center;
 }
 
 .footer p {
-  @apply text-sm text-[#F5F5F5] font-light w-1/2 break-after-all;
+  @apply text-sm text-center lg:text-left text-[#F5F5F5] font-light  lg:w-1/2 lg:break-after-all;
 }
 
 .footer-links {
-  @apply flex flex-col md:flex-row items-center gap-6 2xl:gap-12 text-base;
+  @apply flex pt-5 lg:pt-0 flex-col md:flex-row items-center gap-6 2xl:gap-12 text-base;
 }
 .footer-links a {
   @apply whitespace-nowrap px-2;
