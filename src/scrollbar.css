@@ -167,7 +167,7 @@ body:not(:hover)::-webkit-scrollbar-thumb {
 
 .head-text {
 
-  @apply text-sm max-sm:text-xs max-sm:leading-4 font-normal leading-6 text-center;
+  @apply text-sm max-sm:text-xs max-sm:leading-4 font-normal leading-6 ;
 }
 
 .gallery {

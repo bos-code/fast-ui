@@ -139,7 +139,7 @@ li{
 }
 
 .price-wrapper p {
-  @apply text-sm max-sm:text-xs max-sm:text-center md:w-3/4;
+  @apply text-sm max-sm:text-xs max-sm:text-center md:text-left md:w-3/4;
 }
 
 .price-wrapper ul {
@@ -233,7 +233,7 @@ li{
   @apply flex flex-col items-center justify-center gap-5 py-32;
 }
 .heading {
-  @apply text-4xl text-center  lg:text-6xl lg:text-left w-full  flex-2/5 text-white font-bold lg:leading-[150%] capitalize;
+  @apply text-4xl text-center  lg:text-6xl  w-full  flex-2/5 text-white font-bold lg:leading-[150%] capitalize;
 }
 
 .form {
